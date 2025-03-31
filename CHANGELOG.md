@@ -5,33 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Breaking Changes
-
-Breaking changes are modifications that are not backward compatible and may require users to update their code or configurations. We follow these rules:
-
-- Major version (1.0.0, 2.0.0, etc.): Contains breaking changes
-- Minor version (0.1.0, 0.2.0, etc.): New features, no breaking changes
-- Patch version (0.1.1, 0.2.1, etc.): Bug fixes only, no breaking changes
-
-### Example of Breaking Changes
-```typescript
-// Before v1.0.0
-interface Conversation {
-  messages: Message[];
-  title: string;
-}
-
-// After v1.0.0 (Breaking Change)
-interface Conversation {
-  messages: Message[];
-  metadata: {
-    title: string;
-    date: string;
-    model: string;
-  };
-}
-```
-
 ## [0.2.0] - 2024-03-31
 
 ### Added
@@ -67,17 +40,6 @@ interface Conversation {
 - 📚 Helpful links section
 - 🤝 Contributing guidelines
 - 📄 MIT License
-
-### Features
-- Export conversations to markdown format
-- Generate intelligent summaries including:
-  - Main topics discussed
-  - Number of code examples
-  - Total message count
-  - Total conversation length
-- Preserve timestamps and metadata
-- Maintain code block formatting
-- Secure and private - all processing happens locally
 
 ## [Unreleased]
 
