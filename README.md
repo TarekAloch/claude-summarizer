@@ -4,9 +4,9 @@ A TypeScript script that exports Claude conversations to markdown with intellige
 
 ## 🎥 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue?style=for-the-badge)](https://github.com/TarekAloch/claude-summarizer/discussions/1)
+[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue?style=for-the-badge)](https://github.com/TarekAloch/claude-summarizer/issues/1)
 
-Try it out with our sample conversation! Click the badge above to see a live demo in the Discussions tab.
+Try it out with our sample conversation! Click the badge above to see a live demo in the Issues tab.
 
 ## 🎬 Watch It In Action
 
