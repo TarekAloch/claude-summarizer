@@ -8,6 +8,18 @@ A TypeScript script that exports Claude conversations to markdown with intellige
 
 Try it out with our sample conversation! Click the badge above to see a live demo in the Discussions tab.
 
+## 🎬 Watch It In Action
+
+![Claude Summarizer Demo](docs/gifs/claude-summarizer-demo.gif)
+*Watch how easy it is to export and summarize your Claude conversations!*
+
+### What's happening in the demo:
+1. 📝 Creating a sample conversation
+2. 🚀 Running the export script
+3. 📊 Generating the summary
+4. 💾 Saving the markdown file
+5. 📱 Viewing the result
+
 ## 📸 Screenshots
 
 ### Conversation Export
