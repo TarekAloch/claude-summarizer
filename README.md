@@ -1,5 +1,15 @@
 # 🤖 Claude Conversation Summarizer
 
+Ever had a great conversation with Claude that you wished you could remember later? Or struggled to maintain context across multiple chat sessions? This tool solves those problems by intelligently exporting and summarizing your Claude conversations into beautiful markdown files.
+
+## 🎯 Why This Matters
+
+- **Project Continuity**: Keep track of important decisions, code snippets, and discussions across multiple Claude sessions
+- **Knowledge Preservation**: Never lose valuable insights from your conversations
+- **Context Maintenance**: Help Claude understand previous discussions when starting new conversations
+- **Documentation**: Automatically create project documentation from your conversations
+- **Coming Soon**: Auto-upload to Claude's project docs for persistent memory across all project conversations! 🚀
+
 A TypeScript script that exports Claude conversations to markdown with intelligent summaries. Perfect for saving and organizing your Claude chats! 🎯
 
 ## 🎥 Live Demo
