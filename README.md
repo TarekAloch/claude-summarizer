@@ -1,98 +1,139 @@
-# Claude Conversation Export Script
+# 🤖 Claude Conversation Summarizer
 
-A utility script for exporting Claude conversations to markdown format, with options for creating Claude-friendly summaries.
+A TypeScript script that exports Claude conversations to markdown with intelligent summaries. Perfect for saving and organizing your Claude chats! 🎯
 
-## Features
+## ✨ Features
 
-- Export full conversations to markdown
-- Generate Claude-friendly summaries with context
-- Automatic topic extraction
-- Timestamp-based organization
-- Support for saving to Claude's project files
+- 📝 Exports conversations to markdown format
+- 🔍 Generates intelligent summaries including:
+  - 🏷️ Main topics discussed
+  - 💻 Number of code examples
+  - 📊 Total message count
+  - 📏 Total conversation length
+- ⏰ Preserves timestamps and metadata
+- 🎨 Maintains code block formatting
+- 🔒 Secure and private - all processing happens locally
 
-## Installation
+## 🚀 Installation
 
-1. Navigate to the scripts directory:
-```bash
-cd servers/scripts
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/TarekAloch/claude-summarizer.git
+   cd claude-summarizer
+   ```
 
 2. Install dependencies:
-```bash
-npm install
+   ```bash
+   npm install
+   ```
+
+## 💡 Usage
+
+1. Create a conversation object following the `Conversation` interface:
+   ```typescript
+   const conversation: Conversation = {
+     messages: [
+       {
+         role: 'user',
+         content: 'Your message here',
+         timestamp: '2024-03-31 10:00 AM'
+       },
+       {
+         role: 'assistant',
+         content: 'Claude\'s response here',
+         timestamp: '2024-03-31 10:01 AM'
+       }
+     ],
+     metadata: {
+       title: 'Optional conversation title',
+       date: '2024-03-31',
+       model: 'Claude 3.5 Sonnet'
+     }
+   };
+   ```
+
+2. Run the script:
+   ```bash
+   npm start
+   ```
+
+The script will create a markdown file in the `conversations` directory with a timestamp in the filename. 📁
+
+## 📋 Output Format
+
+The generated markdown file will include:
+
+1. 📌 Title and metadata
+2. 📊 Summary section with:
+   - 🏷️ Main topics discussed
+   - 💻 Number of code examples
+   - 📝 Total message count
+   - 📏 Total conversation length
+3. 💬 Full conversation with:
+   - 👤 Messages formatted with role and timestamp
+   - 💻 Preserved code blocks
+   - 🎨 Proper markdown formatting
+
+## 🌟 Example Output
+
+```markdown
+# Claude Conversation Export
+
+**Date**: 2024-03-31
+**Title**: React Component Creation
+**Model**: Claude 3.5 Sonnet
+
+## Summary
+
+- **Topics**: component, function, return, world, hello
+- **Code Examples**: 1 code blocks
+- **Total Messages**: 2
+- **Total Length**: 150 characters
+
+## Conversation
+
+### User (2024-03-31 10:00 AM)
+
+How do I create a React component?
+
+### Claude (2024-03-31 10:01 AM)
+
+Here's how to create a basic React component:
+
+```jsx
+function MyComponent() {
+  return <div>Hello World!</div>;
+}
+```
 ```
 
-3. Build the script:
-```bash
-npm run build
-```
+## 🔗 Helpful Links
 
-## Usage
+### About Claude
+- [Claude Documentation](https://docs.anthropic.com/claude/docs) 📚
+- [Claude 3.5 Sonnet Release Notes](https://www.anthropic.com/news/claude-3-sonnet-20240229) 🆕
+- [Claude API Reference](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) 🔌
 
-### Basic Export
-To export a conversation to markdown:
-```bash
-npm start
-```
-This will save the conversation to the `conversations` directory with a timestamp.
+### About MCP (Model Context Protocol)
+- [MCP GitHub Repository](https://github.com/modelcontextprotocol/servers) 🏗️
+- [MCP Documentation](https://github.com/modelcontextprotocol/servers/wiki) 📖
+- [MCP Examples](https://github.com/modelcontextprotocol/servers/tree/main/examples) 💡
 
-### Export with Claude Summary
-To export a conversation and create a Claude-friendly summary:
-```bash
-npm run claude
-```
-This will:
-1. Save the full conversation to the `conversations` directory
-2. Create a summary in Claude's Projects directory (`~/Library/Application Support/Claude/Projects`)
+### Related Tools
+- [Cursor IDE](https://cursor.sh) - The best IDE for Claude integration 🖥️
+- [GitHub Copilot](https://github.com/features/copilot) - Another great AI coding assistant 🤖
+- [VS Code Claude Extension](https://marketplace.visualstudio.com/items?itemName=Anthropic.claude) - Use Claude in VS Code 🔌
 
-## Summary Format
+## 🤝 Contributing
 
-The Claude-friendly summary includes:
-- Title (extracted from first user message)
-- Last update timestamp
-- Context (last 3 messages)
-- Recent messages (last 5 substantial messages)
-- Metadata (total messages, topics, conversation ID)
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## Directory Structure
+## 📄 License
 
-```
-servers/scripts/
-├── conversations/           # Full conversation exports
-│   └── conversation-*.md
-├── dist/                   # Compiled JavaScript files
-├── export-conversation.ts  # Source code
-└── package.json           # Dependencies and scripts
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Customization
+## 🙏 Acknowledgments
 
-To modify the script for your needs:
-
-1. Edit `export-conversation.ts` to:
-   - Change the number of messages in summaries
-   - Modify topic extraction
-   - Adjust the summary format
-
-2. Rebuild the script:
-```bash
-npm run build
-```
-
-## Development
-
-To run the script in development mode:
-```bash
-npm run dev
-```
-
-## Notes
-
-- The script automatically creates necessary directories
-- Summaries are designed to fit within Claude's context window
-- Files are named with ISO timestamps for easy sorting
-- The script uses Node.js native modules (fs/promises, path)
-
-## License
-
-MIT License - See the main project LICENSE file for details. 
+- Thanks to Anthropic for creating Claude! 🤖
+- Thanks to the MCP team for their amazing protocol! 🏗️
+- Thanks to all contributors who help improve this tool! 👥 
