@@ -2,6 +2,26 @@
 
 A TypeScript script that exports Claude conversations to markdown with intelligent summaries. Perfect for saving and organizing your Claude chats! 🎯
 
+## 🎥 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue?style=for-the-badge)](https://github.com/TarekAloch/claude-summarizer/discussions/1)
+
+Try it out with our sample conversation! Click the badge above to see a live demo in the Discussions tab.
+
+## 📸 Screenshots
+
+### Conversation Export
+![Conversation Export](docs/images/conversation-export.png)
+*Exported conversation with summary and formatted messages*
+
+### Code Block Preservation
+![Code Block](docs/images/code-block.png)
+*Code blocks are perfectly preserved with syntax highlighting*
+
+### Summary Generation
+![Summary](docs/images/summary.png)
+*Intelligent summary with topics and statistics*
+
 ## ✨ Features
 
 - 📝 Exports conversations to markdown format
@@ -137,3 +157,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to Anthropic for creating Claude! 🤖
 - Thanks to the MCP team for their amazing protocol! 🏗️
 - Thanks to all contributors who help improve this tool! 👥 
+
+## 📝 Note
+
+The screenshots above are placeholders. To add real screenshots:
+1. Take a screenshot of your exported conversation
+2. Save it in the `docs/images` directory
+3. Update the image paths in this README
+4. Submit a pull request with your screenshots 
