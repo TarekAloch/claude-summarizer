@@ -1,0 +1,20 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "MCP server utility scripts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/export-conversation.js",
+    "dev": "ts-node --esm export-conversation.ts",
+    "claude": "node dist/export-conversation.js --claude"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.17.28",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
